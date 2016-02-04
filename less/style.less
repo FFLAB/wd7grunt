@@ -1,0 +1,59 @@
+/*  01 VARIABILI */
+
+@blu: #002982;
+@orange: #ff7300;
+@lightblack: #222;
+@fontprimaria: "Helvetica";
+
+#box{
+    color: @orange;
+    background-color: @lightblack;
+    border: 1px solid @blu;
+    font-family: @fontprimaria;
+}
+
+/* 02 - MIXIN */
+
+.borderDotted{
+border: 1px dotted @lightblack;
+}
+
+#box2{
+    background: aqua;
+font-size: 120%;
+.borderDotted;
+}
+
+/* MIXIN PARAMETRICI es. border-radius(@arg)*/
+
+/*Dichiariamo la funzione .border-radius() */
+.border-radius (@radius) {
+    border-radius: @radius; 
+}
+
+/* la inseriamo nel selettore #main passando come argomento 4px*/
+#main{ .border-radius(4px);}
+
+/* la inseriamo nel selettore #last passando come argomento 12 px*/
+
+#last{ .border-radius(12px);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
